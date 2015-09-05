@@ -12,5 +12,5 @@ urlpatterns = patterns('',
 	# url(r'^blog/', include('blog.urls')),
 
 	url(r'getmsg', getmsg, name=getmsg),
-	url(r'sendmsg', sendmsg, name=sendmsg)
+	url(r'sendmsg', sendmsg, name=sendmsg),
 )
