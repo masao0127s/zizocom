@@ -145,12 +145,14 @@ def getmsg(request):
 			message = message + u'しーや'
 		else:
 			message = message
+			msg_type = 0
 
 		# ToDoListにする
 		new_todo = ToDoList.objects.create(
 			zizo_id = zizo_id,
 			target = target_usr,
 			message = message,
+			msg_type = msg_type,
 		)
 		new_todo.save()
 
