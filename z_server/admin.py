@@ -38,6 +38,7 @@ class ToDoListAdmin (admin.ModelAdmin):
 		'zizo_id',
 		'target',
 		'message',
+		'msg_type',
 		'done',
 		'input_date',
 	)
