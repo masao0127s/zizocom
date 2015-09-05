@@ -72,7 +72,8 @@ def sendmsg(request):
 		zizo_id = 1
 		# zizo_id = request.GET['zizo_id']
 
-		msg_list = ToDoList.objects.filter(username=usr_id)
+		user = ZizoUser.objects.get(username=usr_id)
+		msg_list = ToDoList.objects.filter(target=user)
 		if msg_list is not None:
 			# ヒットしたメッセージを古い順にソート
 			msg_list = sorted(msg_list, key=lambda x: input_date)
