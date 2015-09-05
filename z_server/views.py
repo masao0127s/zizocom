@@ -76,7 +76,7 @@ def sendmsg(request):
 		msg_list = ToDoList.objects.filter(target=user)
 		if msg_list is not None:
 			# ヒットしたメッセージを古い順にソート
-			msg_list = sorted(msg_list, key=lambda x: input_date)
+			msg_list = sorted(msg_list, key=lambda x: x.input_date)
 			# ひとつずつ送信
 			for obj in msg_list:
 				# response = HttpResponse()
