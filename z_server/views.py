@@ -146,14 +146,14 @@ def getmsg(request):
 		# json形式にする
 		# json = generate_json(user_id, zizo_id, wish, target, trouble, message)
 		# activityにいれる
-		new_act = Activity.objects.create(
-			user = user,
-			zizo_id = zizo_id,
-			act_type = 'MS',
-			# json = json,
-			get_point = 0,
-		)
-		new_act.save()
+		#new_act = Activity.objects.create(
+		#	user = user,
+		#	zizo_id = zizo_id,
+		#	act_type = 'MS',
+		#	# json = json,
+		#	get_point = 0,
+		#)
+		#new_act.save()
 
 	return render_to_response(
 		'z_server/getmsg.html',
