@@ -8,9 +8,9 @@
 	
 	{% for msg in msg_list %}
 		{% ifequal msg.done True %}
-			{{ msg.message }}<br>
+			<link href="{{ MEDIA_URL }}zizocon.png"/> < {{ msg.message }}<br>
 		{% else %}
-			{{ msg.message }} / <fonr color=red>new</font><br>
+			<link href="{{ MEDIA_URL }}zizocon.png"/> < {{ msg.message }} / <fonr color=red>new</font><br>
 		{% endifequal %}
 	{% endfor %}
 	
