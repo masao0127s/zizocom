@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# coding: utf-8
 from django.contrib import admin
 from django.db.models import get_models
 from django.contrib.admin.sites import AlreadyRegistered
@@ -25,7 +27,7 @@ class ActivityAdmin (models.Model):
         'json',
         'get_point',
     }
-    
+
 	def user(self, obj):
 		return '%s' % (obj.user.id)
 
@@ -38,7 +40,7 @@ class ToDoListAdmin (models.Model):
         'message',
         'done',
     }
-    
+
     def target(self, obj):
     return '%s' % (obj.user.id)
 
