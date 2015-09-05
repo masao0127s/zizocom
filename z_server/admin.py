@@ -36,9 +36,10 @@ class ToDoListAdmin (admin.ModelAdmin):
 
 	list_display = (
 		'zizo_id',
-		'input_date',
+		'target',
 		'message',
 		'done',
+		'input_date',
 	)
 
 	def target(self, obj):
