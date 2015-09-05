@@ -61,48 +61,6 @@ import commands.generate_json
 
 
 
-# メッセージ受信
-@csrf_exempt
-def getmsg(request):
-	# うけとり
-	if request.method == 'GET':
-		usr_id = request.GET['User']
-		# wish = request.GET['wish']
-		target = request.GET['NayamiUser']
-		# trouble = request.GET['trouble']
-		message = request.GET['NayamiStr']
-		# zizo_id = request.GET['zizo_id']
-		zizo_id = 1
-
-		target_usr = ZizoUser.objects.get(username=target)
-
-		# ToDoListにする
-		new_todo = ToDoList.objects.create(
-			zizo_id = zizo_id,
-			target = target_usr,
-			message = message,
-		)
-		new_todo.save()
-
-		user = ZizoUser.objects.get(username=usr_id)
-		# json形式にする
-		# json = generate_json(user_id, zizo_id, wish, target, trouble, message)
-		# activityにいれる
-		new_act = Activity.objects.create(
-			user = user,
-			zizo_id = zizo_id,
-			act_type = 'MS',
-			# json = json,
-			get_point = 0,
-		)
-		new_act.save()
-
-	return render_to_response(
-		'getmsg.html'
-		context_instance = RequestContext(request, {})
-	)
-
-
 # その人へのメッセージを送る
 @csrf_exempt
 def sendmsg(request):
@@ -158,3 +116,44 @@ def sendmsg(request):
 # 		'checkin.html'
 # 		context_instance = RequestContext(request, {})
 # 	)
+
+# メッセージ受信
+@csrf_exempt
+def getmsg(request):
+	# うけとり
+	if request.method == 'GET':
+		usr_id = request.GET['User']
+		# wish = request.GET['wish']
+		target = request.GET['NayamiUser']
+		# trouble = request.GET['trouble']
+		message = request.GET['NayamiStr']
+		# zizo_id = request.GET['zizo_id']
+		zizo_id = 1
+
+		target_usr = ZizoUser.objects.get(username=target)
+
+		# ToDoListにする
+		new_todo = ToDoList.objects.create(
+			zizo_id = zizo_id,
+			target = target_usr,
+			message = message,
+		)
+		new_todo.save()
+
+		user = ZizoUser.objects.get(username=usr_id)
+		# json形式にする
+		# json = generate_json(user_id, zizo_id, wish, target, trouble, message)
+		# activityにいれる
+		new_act = Activity.objects.create(
+			user = user,
+			zizo_id = zizo_id,
+			act_type = 'MS',
+			# json = json,
+			get_point = 0,
+		)
+		new_act.save()
+
+	return render_to_response(
+		'getmsg.html'
+		context_instance = RequestContext(request, {})
+	)
