@@ -98,7 +98,7 @@ def getmsg(request):
 		new_act.save()
 
 	return render_to_response(
-		'z_server/getmsg.html'
+		'getmsg.html'
 		context_instance = RequestContext(request, {})
 	)
 
@@ -125,7 +125,7 @@ def sendmsg(request):
 				obj.save()
 
 	return render_to_response(
-		'z_server/sendmsg.html'
+		'sendmsg.html'
 		context_instance = RequestContext(request, {})
 	)
 
