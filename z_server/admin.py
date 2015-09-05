@@ -42,7 +42,7 @@ class ToDoListAdmin (models.Model):
     }
 
     def target(self, obj):
-    return '%s' % (obj.user.id)
+    	return '%s' % (obj.user.id)
 
 
 admin.site.register(ZizoUser, ZizoUserAdmin)
