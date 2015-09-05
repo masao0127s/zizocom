@@ -10,23 +10,23 @@ from models import *
 
 class ZizoUserAdmin (auth_models.User):
 
-    list_display = {
-        'id',
-        'username'
-        'point',
-        'level',
-    }
+	list_display = (
+		'id',
+		'username',
+		'point',
+		'level',
+	)
 
 
 class ActivityAdmin (models.Model):
 
-    list_display = {
-        'datetime',
-        'zizo_id',
-        'act_type',
-        'json',
-        'get_point',
-    }
+	list_display = (
+		'datetime',
+		'zizo_id',
+		'act_type',
+		'json',
+		'get_point',
+	)
 
 	def user(self, obj):
 		return '%s' % (obj.user.id)
@@ -34,15 +34,15 @@ class ActivityAdmin (models.Model):
 
 class ToDoListAdmin (models.Model):
 
-    list_display = {
-        'zizo_id',
-        'input_date',
-        'message',
-        'done',
-    }
+	list_display = (
+		'zizo_id',
+		'input_date',
+		'message',
+		'done',
+	)
 
-    def target(self, obj):
-    	return '%s' % (obj.user.id)
+	def target(self, obj):
+		return '%s' % (obj.user.id)
 
 
 admin.site.register(ZizoUser, ZizoUserAdmin)
