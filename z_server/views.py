@@ -134,8 +134,17 @@ def getmsg(request):
 		message = request.GET['NayamiStr']
 		# zizo_id = request.GET['zizo_id']
 		zizo_id = 1
-
+		msg_type = request.GET['NayamiType']
 		target_usr = ZizoUser.objects.get(username=target)
+		
+		if msg_type == 1:
+			message = message + u'たらどうや'
+		elif msg_type == 2:
+			message = message + u'や'
+		elif msg_type == 3:
+			message = message + u'しーや'
+		else:
+			message = message
 
 		# ToDoListにする
 		new_todo = ToDoList.objects.create(
