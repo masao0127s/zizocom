@@ -138,11 +138,11 @@ def getmsg(request):
 		target_usr = ZizoUser.objects.get(username=target)
 		
 		if msg_type == '1':
-			message = message + 'たらどうや'
+			message = message + u'たらどうや'
 		elif msg_type == '2':
-			message = message + 'や'
+			message = message + u'や'
 		elif msg_type == '3':
-			message = message + 'しーや'
+			message = message + u'しーや'
 		else:
 			message = message
 
