@@ -8,7 +8,7 @@ from django.utils.html import format_html
 
 from models import *
 
-class ZizoUserAdmin (auth_models.User):
+class ZizoUserAdmin (admin.ModelAdmin):
 
 	list_display = (
 		'id',
@@ -18,7 +18,7 @@ class ZizoUserAdmin (auth_models.User):
 	)
 
 
-class ActivityAdmin (models.Model):
+class ActivityAdmin (admin.ModelAdmin):
 
 	list_display = (
 		'datetime',
@@ -32,7 +32,7 @@ class ActivityAdmin (models.Model):
 		return '%s' % (obj.user.id)
 
 
-class ToDoListAdmin (models.Model):
+class ToDoListAdmin (admin.ModelAdmin):
 
 	list_display = (
 		'zizo_id',
