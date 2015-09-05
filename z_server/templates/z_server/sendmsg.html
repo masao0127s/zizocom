@@ -4,10 +4,15 @@
 		<meta charset="utf-8">
 	 </head>
 	<body>
+	hello zizo world!
+	
+	{% for msg in msg_list %}	
+			{{ msg.message }}
+	{% endfor %}
+	
 		<form method="GET" action="/services/z_server/sendmsg">
-	<input type="text" class="form-control login-field" value="" placeholder="User" id="User"  name="User"/>
-	<input type="text" class="form-control login-field" value="" placeholder="zizo_id" id="zizo_id"  name="zizo_id"/>
-</form>
-hello zizo world!
+			<input type="text" class="form-control login-field" value="" placeholder="User" id="User"  name="User"/>
+			<input type="text" class="form-control login-field" value="" placeholder="zizo_id" id="zizo_id"  name="zizo_id"/>
+		</form>
 	</body>
 </html>
