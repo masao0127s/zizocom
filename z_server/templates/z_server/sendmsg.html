@@ -4,10 +4,14 @@
 		<meta charset="utf-8">
 	 </head>
 	<body>
-	hello zizo world!
+	ZIZOの気持ちやで<br>
 	
-	{% for msg in msg_list %}	
+	{% for msg in msg_list %}
+		{% ifequal msg.done True %}
 			{{ msg.message }}<br>
+		{% else %}
+			{{ msg.message }} / <fonr color=red>new</font><br>
+		{% endif %}
 	{% endfor %}
 	
 		<br><br><br><br><br>
