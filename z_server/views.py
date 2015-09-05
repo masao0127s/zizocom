@@ -88,7 +88,7 @@ def sendmsg(request):
 	return render_to_response(
 		'z_server/sendmsg.html',
 		context_instance = RequestContext(request, {
-			msg_list = msg_list,	
+			'msg_list' : msg_list,	
 		})
 	)
 
