@@ -30,6 +30,8 @@ from config import *
 import json
 import commands.generate_json
 
+CH_POINT = 3
+
 # 新規登録
 # @csrf_exempt
 # def registration(request):
@@ -100,7 +102,7 @@ def sendmsg(request):
 # 			user = usr,
 # 			zizo_id = zizo_id,
 # 			act_type = 'CH',
-# 			get_point = TOKU_POINT[CH_POINT],
+# 			get_point = CH_POINT,
 # 		)
 # 		new_act.save()
 
