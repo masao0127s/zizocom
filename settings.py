@@ -61,7 +61,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': os.path.join(BASE_DIR, 'data.db'),
-        'NAME': 'var/www/zizocom/db.sqlite3'
+        'NAME': 'db.sqlite3'
     }
 }
 
