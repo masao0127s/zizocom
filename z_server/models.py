@@ -60,7 +60,7 @@ class ToDoList (models.Model):
     # )
 
     message = models.TextField(_(u'message json'), blank=True)
-    done = models.BooleanField(_(u'done'), default=True)
+    done = models.BooleanField(_(u'done'), default=False)
 
     class Meta:
         app_label = APP_LABEL

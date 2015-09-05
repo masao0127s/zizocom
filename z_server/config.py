@@ -10,3 +10,10 @@ WELCOME_MSG = {
 	4: u'ええことあったか',
 	5: u'今日はどないしたんや',
 }
+
+
+TOKU_POINT = {
+	CH_POINT: 1,
+	MS_POINT: 1,
+
+}
