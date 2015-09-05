@@ -12,8 +12,7 @@ WELCOME_MSG = {
 }
 
 
-TOKU_POINT = {
-	CH_POINT: 1,
-	MS_POINT: 1,
-
-}
+#TOKU_POINT = {
+#	CH_POINT: 1,
+#	MS_POINT: 1,
+#}
