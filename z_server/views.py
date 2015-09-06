@@ -140,7 +140,7 @@ def getmsg(request):
 		if msg_type == '1':
 			message = message + u'たらどうや'
 		elif msg_type == '2':
-			if message[-2] == u'ない':
+			if message[-2:] == u'ない':
 				message = message + u'ほうがいいんちゃう?'
 			else:
 				message = message + u'たほうがいいんちゃう?'
