@@ -138,9 +138,9 @@ def getmsg(request):
 		target_usr = ZizoUser.objects.get(username=target)
 		
 		if msg_type == '1':
-			message = message + u'しーや'
+			message = message + u'たらどうや'
 		elif msg_type == '2':
-			message = message + u'したらどうや'
+			message = message + u'たほうがいいんちゃう?'
 		else:
 			message = message
 			msg_type = 0
