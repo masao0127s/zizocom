@@ -7,11 +7,13 @@
 	ZIZOの気持ちやで<br>
 	
 	{% for msg in msg_list %}
+		<div style="background:#ffffff; padding:10px; border:1px solid #ffffff; border-radius:10px;">
 		{% ifequal msg.done True %}
 			<img src="{{ MEDIA_URL }}zizocon.png" width="30" height="30"> < {{ msg.message }}<br>
 		{% else %}
 			<img src="{{ MEDIA_URL }}zizocon.png" width="30" height="30> < {{ msg.message }} / <fonr color=red>new</font><br>
 		{% endifequal %}
+		</div>
 	{% endfor %}
 	
 		<br><br><br><br><br>
