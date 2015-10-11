@@ -13,7 +13,7 @@ urlpatterns = patterns('',
 
 	url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 	url(r'^admin/', include(admin.site.urls)),
-	url(r'^z_server/', include('z_server.urls')),
+	url(r'^z_server/', include('z_server.urls')), #~~.jp/以下のURLを指定するファイルを指定
 	url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
 	(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
 	url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
